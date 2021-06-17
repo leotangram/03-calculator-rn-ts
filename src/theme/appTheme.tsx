@@ -27,12 +27,10 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   button: {
-    backgroundColor: '#2d2d2d',
     borderRadius: 100,
     height: 80,
     justifyContent: 'center',
     marginHorizontal: 10,
-    width: 80
   },
   textButton: {
     color: '#ffffff',
