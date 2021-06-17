@@ -20,18 +20,25 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right'
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 18,
+    paddingHorizontal: 10
+  },
   button: {
-    backgroundColor: '#9b9b9b',
+    backgroundColor: '#2d2d2d',
     borderRadius: 100,
     height: 80,
     justifyContent: 'center',
+    marginHorizontal: 10,
     width: 80
   },
   textButton: {
-    color: '#000000',
+    color: '#ffffff',
     fontSize: 30,
     fontWeight: '300',
     padding: 10,
     textAlign: 'center'
-  }
+  },
 });
