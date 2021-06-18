@@ -38,6 +38,21 @@ const CalculatorScreen = () => {
     }
   }
 
+  const deleteBtn = () => {
+    let currentNegative = ''
+    let temporalNumber = number
+    if (number.includes(negative)) {
+      currentNegative = negative
+      temporalNumber = number.substr(1)
+    }
+
+    if (temporalNumber.length > 1)
+      setNumber(currentNegative + temporalNumber.slice(0, -1))
+    else {
+      setNumber(zero)
+    }
+  }
+
   return (
     <View style={styles.calculatorContainer}>
       <Text style={styles.smallResult}>{prevNumber}</Text>
@@ -47,14 +62,14 @@ const CalculatorScreen = () => {
       <View style={styles.row}>
         <ButtonCalculator color={gray} onPress={clean} text="C" />
         <ButtonCalculator color={gray} onPress={positiveNegative} text="+/-" />
-        <ButtonCalculator color={gray} onPress={clean} text="del" />
+        <ButtonCalculator color={gray} onPress={deleteBtn} text="del" />
         <ButtonCalculator color={orange} onPress={clean} text="/" />
       </View>
       <View style={styles.row}>
         <ButtonCalculator onPress={buildNumber} text="7" />
         <ButtonCalculator onPress={buildNumber} text="8" />
         <ButtonCalculator onPress={buildNumber} text="9" />
-        <ButtonCalculator color={orange} onPress={clean} text="X" />
+        <ButtonCalculator color={orange} onPress={clean} text="x" />
       </View>
       <View style={styles.row}>
         <ButtonCalculator onPress={buildNumber} text="4" />
