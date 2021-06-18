@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import { View, Text } from 'react-native'
 import { styles } from '../theme/appTheme'
 import { useCalculator } from '../hooks/useCalculator'
