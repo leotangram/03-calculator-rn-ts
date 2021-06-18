@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   result: {
     color: '#ffffff',
     fontSize: 60,
+    marginBottom: 10,
     textAlign: 'right'
   },
   smallResult: {

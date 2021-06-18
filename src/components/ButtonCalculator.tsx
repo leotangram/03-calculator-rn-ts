@@ -6,15 +6,17 @@ interface ButtonCalculatorProps {
   color?: string
   text: string
   width?: boolean
+  onPress: (textNumber: string) => void
 }
 
 const ButtonCalculator: FC<ButtonCalculatorProps> = ({
   color = '#2d2d2d',
+  onPress,
   text,
   width = false
 }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => onPress(text)}>
       <View
         style={{
           ...styles.button,
